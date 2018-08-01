@@ -4,10 +4,10 @@
 	<title>Hello QA Startup</title>
 	<meta charset="utf-8">
 	<style type="text/css">
-	#div0 {
-			border: 3px solid gray;
+	#divAll {
+			border: 3px solid #DCDCDC;
 			margin:0px auto 0px;
-			width: 600px
+			width: 600px;
 			}
     img {
 			width: 120px;
@@ -17,69 +17,67 @@
     .flex { 
      		display:flex; 
      		}
-    #div1 {
+    #divTITLE{
      		text-align: center;
-     		background-color: rgba(28,42,45);
-    		}
-    #div2 {
+     		padding: 20px 20px 20px 20px;
+     		background-color: #424246
+     		 }
+    #divLEFT{
      		width: 120px;
      		text-align: center;
-     		background: #7716d4;
-            background: radial-gradient(circle at 20px 70px, #511090, #e8a74e, #0dbfe9);
+            background: radial-gradient(ellipse at 80px 20px, #424246, #716F81);
             padding: 10px;
             color: white
         	}
-     #div3 {
+    #divRIGHT{
      		width: 550px;
      		margin-left: 13px;
+     		margin-top: 10px;
      		}
-    p 	 {color: rgba(13,18,163);}
-    b 	 {color: rgba(64,65,69);}
-    span {border-radius: 20px/20px;}
+        p  {color: #3630EE;}
+        b  {color: #0D0B5D;}
+    span   {border-radius: 20px/20px;}
     
 
 	</style>
 </head>
 <body>
-		<div id=div0>
-			<div id="div1">
-			<h2 style= "color: white">This is my Cat</h2>
-		</div>
+		<div id="divAll">
+			<div id="divTITLE">
+				<h2 style= "color: #FFFFFF; margin-top: 0px; margin-bottom: 0px">This is my Cat</h2>
+			</div>
 			<div class="flex">
-			<div class="flex-item" id="div2">
-			<img src="P3201877.jpg" alt="Картинка" >
-			<h2>Марсель</h2>
-			<h2>Котеевич</h2>
-			<u><big>Что обожает:</big></u>
-			
-		<pre>
-<span style="background-color: rgba(134,19,52)">       Авсянку   </span>
-<span style="background-color: rgba(72,172,14)">  Курочку  </span>
-<span style="background-color: rgba(228,63,45)">        Арбузик  </span>
-		</pre>
-
-        <u><big>Где его можно найти:</big></u>
-
-		<ul style="text-align: left;">	
-			<li><a href="http://facebook.com">facebook</a></li>
-			<li><a href="http://youtube.com">youtube</a></li>		
-			<li><a href="http://youtube.com/watch?v=l_yJ0aH1tqE">murzik</a></li>
-		</ul>	
-		</div>
-		<div class="flex-item" id="div3">
-			<b>Дата рождения:</b>
-			<p>16.04.2007</p>
-			<b>Место рождения:</b>
-			<p style="width:420px;border-bottom:3px solid #0d14f2;">г.Луганск</p>
-			<b>Skills:</b>
-			<p>- Very cute</p>
-			<p>- Soft</p>
-			<p style="width:420px;border-bottom:3px solid #0d14f2;">- Playful</p>
-			<b>О коте:</b>
-			<p>- Любит играть с шариком из бумаги</p>
-			<p style="width:420px;border-bottom:3px solid #0d14f2;">- Любит гонять других котов</p>
-		</div>
-        </div>
+				<div class="flex-item" id="divLEFT">
+					<img src="P3201877.jpg" alt="Картинка" >
+					<h2>Марсель</h2>
+					<h2 style="border-bottom: 3px solid #FFFF00">Котеевич</h2>
+					<u><big>Что обожает:</big></u>
+					<pre>
+<span style="background-color: #FFCC00">   Авсянку   </span>
+<span style="background-color: #0606E2">     Курочку   </span>
+<span style="background-color: #308521">  Арбузик   </span>
+                    </pre>    
+        			<u><big>Где его можно найти:</big></u>
+					<ul style="text-align: left;">	
+						<li><a href="http://facebook.com">facebook</a></li>
+						<li><a href="http://youtube.com">youtube</a></li>		
+						<li><a href="http://youtube.com/watch?v=l_yJ0aH1tqE">murzik</a></li>
+					</ul>	
+				</div>
+				<div class="flex-item" id="divRIGHT">
+					<b>Дата рождения:</b>
+					<p>16.04.2007</p>
+					<b>Место рождения:</b>
+					<p style="width:420px;border-bottom:3px solid #060199">г.Луганск</p>
+					<b>Skills:</b>
+					<p>- Very cute</p>
+					<p>- Soft</p>
+					<p style="width:420px;border-bottom:3px solid #060199">- Playful</p>
+					<b>О коте:</b>
+					<p>- Любит играть с шариком из бумаги</p>
+					<p style="width:420px;border-bottom:3px solid #060199">- Любит гонять других котов</p>
+				</div>
+        	</div>
 		</div>
 </body>
 </html>
