@@ -30,40 +30,40 @@ else:
     print("У вас немае стільки продуктів")
 
 index_removed_product_2 = int(input("Вкажіть номер продукта який треба прибрати ")) - 1
-if 0 <= index_removed_product_1 < len(basket_product):
-    removed_product_2 = basket_product.pop(index_removed_product_1)
+if 0 <= index_removed_product_2 < len(basket_product):
+    removed_product_2 = basket_product.pop(index_removed_product_2)
     print("Прибрали продукт", removed_product_2, " в карзині залишается")
     print(basket_product)
 else:
     print("У вас немае стільки продуктів")
 
 index_removed_product_3 = int(input("Вкажіть номер продукта який треба прибрати ")) - 1
-if 0 <= index_removed_product_1 < len(basket_product):
-    removed_product_3 = basket_product.pop(index_removed_product_1)
+if 0 <= index_removed_product_3 < len(basket_product):
+    removed_product_3 = basket_product.pop(index_removed_product_3)
     print("Прибрали продукт", removed_product_3, " в карзині залишается")
     print(basket_product)
 else:
     print("У вас немае стільки продуктів")
 
 index_removed_product_4 = int(input("Вкажіть номер продукта який треба прибрати ")) - 1
-if 0 <= index_removed_product_1 < len(basket_product):
-    removed_product_4 = basket_product.pop(index_removed_product_1)
+if 0 <= index_removed_product_4 < len(basket_product):
+    removed_product_4 = basket_product.pop(index_removed_product_4)
     print("Прибрали продукт", removed_product_4, " в карзині залишается")
     print(basket_product)
 else:
     print("У вас немае стільки продуктів")
 
 index_removed_product_5 = int(input("Вкажіть номер продукта який треба прибрати ")) - 1
-if 0 <= index_removed_product_1 < len(basket_product):
-    removed_product_5 = basket_product.pop(index_removed_product_1)
+if 0 <= index_removed_product_5 < len(basket_product):
+    removed_product_5 = basket_product.pop(index_removed_product_5)
     print(f"Прибрали продукт", removed_product_5, " в карзині залишается")
 
 print( "В кошику зараз")
 print(basket_product)
 
 
-products_2 = input("Продукти які треба додати, може ви щось забули")
+products_2 = input("Продукти які треба додати, може ви щось забули ")
 basket_product.append(products_2)
 
-print("Ось ваші продукти, гарного дня")
+print("Ось ваші продукти, гарного дня ")
 print(basket_product)
