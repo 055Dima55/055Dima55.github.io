@@ -7,34 +7,34 @@
 
 * завдання з зірочкою не впливає на бал. Округліть суму якщо копійок більше ніж 44 то це буде + 1 гривня,
 якщо менше. то тоді просто відкидаємо копійки від ціни.'''
-#
-#price_of_goods = input("Введіть вартість покупок ")
-#discount_coupon = input("У Вас є купон на знижку Так/Ні ").lower()
-#
-#total_prise = 0
-#total_discount = 0
-#
-#for i in price_of_goods.split():
-#    cost = (int(i)/100 * 6.5)
-#    total_cost = int(i)+cost
-#    total_prise += total_cost
-#    total_discount += cost
-#
-#if discount_coupon == "так":
-#    discount_type = input("У Вас  купон на суму/відсоток ").lower()
-#    if discount_type == "суму":
-#        cost_1 = format(total_discount, ".2f")
-#        print(cost_1)
-#    else:
-#        print(format(total_prise-total_discount), ".2f")
-#else:
-#    print(format(total_prise+total_discount), ".2f")
 
+
+price_of_goods = input("Введіть вартість покупок ")
+discount_coupon = input("У Вас є купон на знижку Так/Ні ").lower()
+
+total_prise = 0
+percent_discount = 10/100
+cash_discount = 50
+
+
+for i in price_of_goods.split():
+    cost = int(i)/100 * 6.5 + int(i)
+    total_prise += cost
+
+if discount_coupon == "так":
+    discount_type = input("У Вас  купон на суму/відсоток ").lower()
+    if discount_type == "суму":
+        cost_1 = format(total_prise - cash_discount, ".2f")
+        print(cost_1)
+    else:
+        print(format(total_prise-(total_prise * percent_discount), ".2f"))
+else:
+    print(format(total_prise, ".2f"))
 
 
 '''Задача 2
 Переробіть задачу з попереднього уроку враховуючи ваші знання з цього уроку, використайте цикл for in або while.'''
-
+#
 #products_1 = input("Введіть список продуктів ")
 #print(products_1)
 #basket_product = products_1.split()
@@ -56,15 +56,15 @@
 #
 #print("Ось ваші продукти, гарного дня ")
 #print(basket_product)
-
-
+#
+#
 
 '''Задача 3
 Напишіть програму Банкомат. Втсановіть пін код для користувача(зробимо це константою).
 Запитайте в користувача Пін якщо він введе три рази не вірно то напишіть що карта заблокована.
 Використовуйте цикл while.'''
 #
-#pin_cod = "1234"
+#pin_cod = 1234
 #attempt = 3
 #
 #while attempt > 0:
@@ -90,9 +90,9 @@ print(format_string) '''
 #name = "Андрій"
 #age = 28
 #
-#f_string = f"Я", {name},", мені", {age}, "років"
+#f_string = f"Я {name}, мені {age} років"
 #print(f_string)
 #
-#format_string = "Я {}, мені {} років.".format(name, age)
+#format_string = "Я {name}, мені {age} років.".format(name=name, age=age)
 #print(format_string)
 #
