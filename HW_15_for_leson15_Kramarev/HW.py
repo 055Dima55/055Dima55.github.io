@@ -8,7 +8,7 @@
 '''
 
 # 1)
-list_a = [i for i in range(9, 121, 1) if i % 3 == 0 and i % 2 == 0]
+list_a = [i for i in range(34, 121, 1) if i % 3 == 0 and i % 2 == 0]
 print(list_a)
 
 

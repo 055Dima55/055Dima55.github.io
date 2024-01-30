@@ -17,6 +17,18 @@ import datetime
 
 class Tests:
 
+    @classmethod
+    def start_class(cls):
+        current_time = datetime.datetime.now()
+        with open("test_log.txt", "a") as file:
+            file.write(f"Tests started at {current_time}\n")
+
+    @classmethod
+    def stop_class(cls):
+        current_time = datetime.datetime.now()
+        with open("test_log.txt", "a") as file:
+            file.write(f"Tests stop at {current_time}\n")
+
     @pytest.mark.parametrize("x, y, result", [
         pytest.param(5, 2, 7, id="first"),
         pytest.param(0, 2, 2, id="second"),
@@ -24,8 +36,6 @@ class Tests:
         pytest.param(-1, -2, -3, id="fourth"),
         pytest.param(100, -100, 0, id="fifth")])
     def test_addition(self, x, y, result):
-        current_time = datetime.datetime.now()
-        print(f"Running test at: {current_time}")
         assert calk.addition(x, y) == result
 
     @pytest.mark.parametrize("x, y, result", [
@@ -35,6 +45,4 @@ class Tests:
         pytest.param(-20, -10, 2, id="fourth"),
         pytest.param(100, 0, "Не ділимо на 0", id="fifth")])
     def test_division(self, x, y, result):
-        current_time = datetime.datetime.now()
-        print(f"Running test at: {current_time}")
         assert calk.division(x, y) == result
