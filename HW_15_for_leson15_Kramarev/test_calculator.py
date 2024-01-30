@@ -22,6 +22,8 @@ class Tests:
         current_time = datetime.datetime.now()
         with open("test_log.txt", "a") as file:
             file.write(f"Tests started at {current_time}\n")
+        with open("test_log.txt", "a") as file:
+            file.write(calk.greet() + "\n")
 
     @classmethod
     def stop_class(cls):
