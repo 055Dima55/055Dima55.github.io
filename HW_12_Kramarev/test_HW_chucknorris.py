@@ -3,7 +3,8 @@
 перевірити чи є ключ "value"
 і перевірити його значення - 2 теста
 Зробити окремий клас
-пошук жарту по конретному слову  https://api.chucknorris.io/jokes/search?query={query}
+пошук жарту по конретному
+слову  https://api.chucknorris.io/jokes/search?query={query}
 зробити класому фікстуру
 тест на статус код
 тест на кількість жартів
@@ -13,13 +14,6 @@
 import pytest
 import requests
 
-@pytest.fixture(scope="class")
-def fixture_random(request):
-    response = requests.request(method="GET", url="https://api.chucknorris.io/jokes/random")
-    status_code = response.status_code
-    request.cls.response = response
-    request.cls.status_code = status_code
-    yield response, status_code
 
 @pytest.mark.usefixtures("fixture_random")
 class TestRandom:
@@ -36,7 +30,6 @@ class TestRandom:
         assert int(self.response.json()["value"]) > 10
 
 
-# останній тест не працює, чому не зовсім розумію
 
 @pytest.SpecificWordfixture(scope="class")
 def chuck_norris_api():
@@ -50,7 +43,7 @@ class TestSpecificWord:
     def test_specific_word(self):
         print(chuck_norris_api.text)
 
-    def test_status_cod(self, chuck_norris_api):
+    def test_status_code(self, chuck_norris_api):
         URL = "https://api.chucknorris.io/jokes/search?query=Horses"
         response = requests.request(method="GET", url=URL)
         assert response.status_code == 200
