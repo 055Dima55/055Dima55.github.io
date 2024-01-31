@@ -15,7 +15,7 @@ import pytest
 import datetime
 
 
-class Tests:
+class CalculatorTests:
 
     @classmethod
     def setup_class(cls):
