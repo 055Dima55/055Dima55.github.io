@@ -1,4 +1,4 @@
-from HW_18_Kramarev.TestBoxPage import TextBoxPage
+from HW_Kramarev_demoqa_com.TestBoxPage import TextBoxPage
 
 
 def test_username_fill_and_check(chrome):
