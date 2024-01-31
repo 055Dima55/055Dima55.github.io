@@ -18,15 +18,13 @@ import datetime
 class Tests:
 
     @classmethod
-    def start_class(cls):
+    def setup_class(cls):
         current_time = datetime.datetime.now()
         with open("test_log.txt", "a") as file:
-            file.write(f"Tests started at {current_time}\n")
-        with open("test_log.txt", "a") as file:
-            file.write(calk.greet() + "\n")
+            file.write(calk.greet() + "\n" f"Tests started at {current_time}\n")
 
     @classmethod
-    def stop_class(cls):
+    def teardown_class(cls):
         current_time = datetime.datetime.now()
         with open("test_log.txt", "a") as file:
             file.write(f"Tests stop at {current_time}\n")
