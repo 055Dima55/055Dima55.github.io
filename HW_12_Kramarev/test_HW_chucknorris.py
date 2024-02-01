@@ -47,6 +47,5 @@ class TestSpecificWord:
 
     def test_specific_joke(self):
         specific_of_joke = "Chuck Norris is not hung like a horse. Horses are hung like Chuck Norris."
-        assert "result" in self.j_son
         jokes = [joke['value'] for joke in self.j_son["result"]]
         assert specific_of_joke in jokes
