@@ -37,7 +37,7 @@ class TestElementsPage:
         for i in range(11, len(elements)):
             assert elements[i] == ''
 
-# тут перевірив відразу всі 33 елементи
+    # тут перевірив відразу всі 33 елементи
     def test_all_elements(self, chrome):
         page = ElementsPage(chrome)
         page.open()
@@ -51,7 +51,7 @@ class TestElementsPage:
         for i, expected_element in enumerate(expected_elements):
             assert elements[i] == expected_element
 
-# тут перевірив відразу всі 33 елементи та ігноруючи порожні
+    # тут перевірив відразу всі 33 елементи та ігноруючи порожні
     def test_all_elements_2(self, chrome):
         page = ElementsPage(chrome)
         page.open()
@@ -64,6 +64,7 @@ class TestElementsPage:
             if expected_element == '':
                 continue
             assert elements[i] == expected_element
+
 
 # тут перевірив відразу всі 33, parametrize
 @pytest.mark.parametrize("expected_elements", [
@@ -78,8 +79,6 @@ def test_all_elements_3(chrome, expected_elements):
     page.open()
     elements = page.get_elements_page_categories()
     assert expected_elements in elements
-
-
 
     # def test_is_button_enabled(self, chrome):
     #     page = PageDynamicProperties(chrome)
