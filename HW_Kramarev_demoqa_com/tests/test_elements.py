@@ -1,3 +1,4 @@
+import pytest
 from selenium.webdriver.remote.webelement import WebElement
 
 from HW_Kramarev_demoqa_com.ElementPage import ElementsPage
@@ -21,18 +22,6 @@ class TestElementsPage:
         page.open()
         elements = page.get_elements_page_categories()
         assert elements[1] == "Check Box"
-
-    def test_elements_number_2(self, chrome):
-        page = ElementsPage(chrome)
-        page.open()
-        elements = page.get_elements_page_categories()
-        assert elements[2] == "Radio Button"
-
-    def test_elements_number_3(self, chrome):
-        page = ElementsPage(chrome)
-        page.open()
-        elements = page.get_elements_page_categories()
-        assert elements[3] == "Web Tables"
 
     def test_elements_number_10(self, chrome):
         page = ElementsPage(chrome)
@@ -75,6 +64,22 @@ class TestElementsPage:
             if expected_element == '':
                 continue
             assert elements[i] == expected_element
+
+# тут перевірив відразу всі 33, parametrize
+@pytest.mark.parametrize("expected_elements", [
+    'Text Box', 'Check Box', 'Radio Button',
+    'Web Tables', 'Buttons', 'Links',
+    'Broken Links - Images', 'Upload and Download',
+    'Dynamic Properties', '', '', '', '', '', '',
+    '', '', '', '', '', '', '', '', '', '', '', '',
+    '', '', '', '', '', ''])
+def test_all_elements_3(chrome, expected_elements):
+    page = ElementsPage(chrome)
+    page.open()
+    elements = page.get_elements_page_categories()
+    assert expected_elements in elements
+
+
 
     # def test_is_button_enabled(self, chrome):
     #     page = PageDynamicProperties(chrome)
