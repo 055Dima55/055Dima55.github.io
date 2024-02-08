@@ -14,7 +14,7 @@ class TestWaiters:
         WebDriverWait(self.driver, timeout=5).until(ec.visibility_of_element_located(visible_invisible_button_loc))
         visible_invisible_button: WebElement = self.driver.find_element(*visible_invisible_button_loc)
         visible_invisible_button.click()
-        assert visible_invisible_button.is_enabled()
+        assert visible_invisible_button.is_displayed()
 
     def test_enable_button(self):
         self.driver.get("https://demoqa.com/dynamic-properties")
