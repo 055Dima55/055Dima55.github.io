@@ -8,6 +8,7 @@ def chrome():
     yield driver
     driver.quit()
 
+
 @pytest.fixture(scope="class")
 def firefox(request):
     driver = webdriver.Firefox()
@@ -15,6 +16,7 @@ def firefox(request):
     driver.implicitly_wait(5)
     yield driver
     driver.quit()
+
 
 @pytest.fixture(scope="class")
 def chrome_class(request):

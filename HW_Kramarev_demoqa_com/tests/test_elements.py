@@ -1,5 +1,4 @@
 import pytest
-from selenium.webdriver.remote.webelement import WebElement
 
 from HW_Kramarev_demoqa_com.ElementPage import ElementsPage
 
