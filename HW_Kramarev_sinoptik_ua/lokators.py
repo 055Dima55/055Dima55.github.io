@@ -1,6 +1,6 @@
 url = "https://ua.sinoptik.ua/"
 
-# By.XPATH
+#  By.XPATH
 Search_area = "//input[contains(@id,'search_city')]"
 # Search_area: Шукає поле введення для пошуку міста.
 Language_switcher = "//a[contains(@title,'погода в Киеве')]"
@@ -12,7 +12,7 @@ Number_days_switch = "//a[@href='//ua.sinoptik.ua/погода-київ/10-днів']"
 Weather_map = "//a[contains(@class,'otherCity')]"
 # Weather_map: Шукає посилання на карту погоди для інших міст.
 
-# By.CSS
+#  By.CSS
 Search_area_1 = "input#search_city"
 Language_switcher_2 = "div#sLang"
 Days_switcher_3 = "div#bd4"
