@@ -15,7 +15,7 @@ class PageButtons:
     def __init__(self, driver: WebDriver):
         self.driver = driver
         self.button_doubleclick_loc = (By.ID, "doubleClickBtn")
-        self.button_right_click_loc = (By.ID, "rightClickBtn")
+        self.button_right_click_loc = (By.CSS_SELECTOR, "button#rightClickBtn")
         self.button_dynamic_id_loc = (By.XPATH, '//button[.="Click Me"]')
         self.button_doubleclick_message_loc = (By.ID, "doubleClickMessage")
         self.button_right_click_message_loc = (By.ID, "rightClickMessage")

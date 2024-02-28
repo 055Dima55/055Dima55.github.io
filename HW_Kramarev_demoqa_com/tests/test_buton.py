@@ -2,12 +2,10 @@ import time
 
 import pytest
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.webdriver.support.wait import WebDriverWait
-
 from HW_Kramarev_demoqa_com.src_pages.page_buttons import PageButtons
 
 
-@pytest.mark.usefixtures("chrome_class")
+@pytest.mark.usefixtures("firefox")
 class TestButtons:
 
     def setup_method(self):
