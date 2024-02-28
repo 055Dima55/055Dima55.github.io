@@ -2,15 +2,15 @@ url = "https://ua.sinoptik.ua/"
 
 # By.XPATH
 Search_area = "//input[contains(@id,'search_city')]"
-# Search_area: Шукає поле введення для пошуку міста.
-Language_switcher = "//a[contains(@title,'погода в Киеве')]"
-# Language_switcher: Шукає перемикач мови для погоди в Києві.
+# Search_area: РЁСѓРєР°С” РїРѕР»Рµ РІРІРµРґРµРЅРЅСЏ РґР»СЏ РїРѕС€СѓРєСѓ РјС–СЃС‚Р°.
+Language_switcher = "//a[contains(@title,'РїРѕРіРѕРґР° РІ РљРёРµРІРµ')]"
+# Language_switcher: РЁСѓРєР°С” РїРµСЂРµРјРёРєР°С‡ РјРѕРІРё РґР»СЏ РїРѕРіРѕРґРё РІ РљРёС”РІС–.
 Days_switcher = "//div[@id='bd4']"
-# Days_switcher: Шукає блок з перемикачем днів.
-Number_days_switch = "//a[@href='//ua.sinoptik.ua/погода-київ/10-днів']"
-# Number_days_switch: Шукає посилання на прогноз на 10 днів.
+# Days_switcher: РЁСѓРєР°С” Р±Р»РѕРє Р· РїРµСЂРµРјРёРєР°С‡РµРј РґРЅС–РІ.
+Number_days_switch = "//a[@href='//ua.sinoptik.ua/РїРѕРіРѕРґР°-РєРёС—РІ/10-РґРЅС–РІ']"
+# Number_days_switch: РЁСѓРєР°С” РїРѕСЃРёР»Р°РЅРЅСЏ РЅР° РїСЂРѕРіРЅРѕР· РЅР° 10 РґРЅС–РІ.
 Weather_map = "//a[contains(@class,'otherCity')]"
-# Weather_map: Шукає посилання на карту погоди для інших міст.
+# Weather_map: РЁСѓРєР°С” РїРѕСЃРёР»Р°РЅРЅСЏ РЅР° РєР°СЂС‚Сѓ РїРѕРіРѕРґРё РґР»СЏ С–РЅС€РёС… РјС–СЃС‚.
 
 # By.CSS
 Search_area_1 = "input#search_city"
