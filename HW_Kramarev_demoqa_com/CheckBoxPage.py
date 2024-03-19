@@ -25,6 +25,12 @@ class CheckboxPage:
             pass
         versatile_checkbox_button.click()
 
+    def expand_folder_documents(self, name) -> None:
+        versatile_checkbox_button = self.driver.find_element(By.XPATH,
+                                                             f"//label[contains(@for, 'tree-node-{name}')]//ancestor"
+                                                             f"::span/button")
+        versatile_checkbox_button.click()
+
     def collapse_folder(self, name) -> None:
         versatile_checkbox_button = self.driver.find_element(By.XPATH,
                                                              f"//label[contains(@for, 'tree-node-{name}')]//ancestor"
